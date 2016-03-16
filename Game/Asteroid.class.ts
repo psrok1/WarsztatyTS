@@ -1,0 +1,3 @@
+﻿module Game.Objects {
+    // @TODO
+}

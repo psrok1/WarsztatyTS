@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{1141D930-0043-477C-AFDE-04E7AA73FC2F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.css" />
+    <Content Include="index.html" />
+    <Content Include="Pixi\pixi.dev.js" />
+    <Content Include="Pixi\pixi.js" />
+    <Content Include="Textures\Asteroids\asteroid1_0.png" />
+    <Content Include="Textures\Asteroids\asteroid1_1.png" />
+    <Content Include="Textures\Asteroids\asteroid1_2.png" />
+    <Content Include="Textures\Asteroids\asteroid1_3.png" />
+    <Content Include="Textures\Asteroids\asteroid1_4.png" />
+    <Content Include="Textures\Asteroids\asteroid1_5.png" />
+    <Content Include="Textures\Asteroids\asteroid1_6.png" />
+    <Content Include="Textures\Bullets\bullet1_0.png" />
+    <Content Include="Textures\Bullets\bullet1_1.png" />
+    <Content Include="Textures\Bullets\bullet2_0.png" />
+    <Content Include="Textures\Bullets\bullet2_1.png" />
+    <Content Include="Textures\Ships\ship1_0.png" />
+    <Content Include="Textures\Ships\ship2_0.png" />
+    <Content Include="Textures\Ships\ship3_0.png" />
+    <Content Include="Textures\Ships\ship4_0.png" />
+    <Content Include="Textures\Ships\ship5_0.png" />
+    <Content Include="Textures\Ships\ship6_0.png" />
+    <Content Include="Textures\Ships\ship7_0.png" />
+    <Content Include="Textures\stars.png" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Game\Asteroid.class.ts" />
+    <TypeScriptCompile Include="Game\Bullet.class.ts" />
+    <TypeScriptCompile Include="Game\GameObject.class.ts" />
+    <TypeScriptCompile Include="Game\Ship.class.ts" />
+    <TypeScriptCompile Include="Game\World.ts" />
+    <TypeScriptCompile Include="Pixi\pixi.d.ts" />
+    <TypeScriptCompile Include="View\GameView.class.ts" />
+    <TypeScriptCompile Include="View\MessageView.class.ts" />
+    <TypeScriptCompile Include="View\Objects\Bullet.class.ts" />
+    <TypeScriptCompile Include="View\Objects\GameObject.class.ts" />
+    <TypeScriptCompile Include="View\Objects\Asteroid.class.ts" />
+    <TypeScriptCompile Include="View\Objects\Ship.class.ts" />
+    <TypeScriptCompile Include="View\TextureManager.class.ts" />
+    <TypeScriptCompile Include="View\View.class.ts" />
+    <TypeScriptCompile Include="View\ViewManager.class.ts" />
+    <TypeScriptCompile Include="_references.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pixi\pixi.dev.js.map" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>WarsztatTS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>24942</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:24942/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
+    <TypeScriptOutFile>app.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
